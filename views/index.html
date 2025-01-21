@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather App</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>ClimaScope</h1>
+                <form id="weatherForm">
+                    <input id="cityInput" type="text" name="cityName"
+                        class="form-control" placeholder="Enter city name..."
+                        required>
+                    <button type="submit" class="btn btn-primary">Get
+                        Weather</button>
+                </form>
+            </div>
+
+            <div id="error" class="error-message d-none"></div>
+
+            <!-- Weather Details -->
+            <div id="weatherDetails" class="weather-card d-none">
+                <div class="CurrentConditions--content">
+                    <div class="CurrentConditions--header">
+                        <h1 class="CurrentConditions--location"
+                            id="cityName"></h1>
+                        <span class="CurrentConditions--timestamp"
+                            id="timestamp"></span>
+                    </div>
+                    <div class="CurrentConditions--body">
+                        <div class="CurrentConditions--primary">
+                            <span class="CurrentConditions--tempValue"
+                                id="temperature"></span>
+                            <div class="CurrentConditions--phraseValue"
+                                id="weatherDescription"></div>
+                        </div>
+                        <div class="CurrentConditions--secondary">
+                            <img id="weatherIcon"
+                                class="CurrentConditions--wxIcon" src
+                                alt="Weather Icon">
+                        </div>
+                    </div>
+                </div>
+
+                <section class="card">
+                    <header class="Card--cardHeader">
+                        <h2 class="Card--cardHeading">Weather Details</h2>
+                    </header>
+                    <div class="Card--content">
+                        <div class="WeatherDetailsListItem">
+                            <div class="WeatherDetailsListItem--label">Feels
+                                Like</div>
+                            <div class="WeatherDetailsListItem--wxData"
+                                id="feelsLike"></div>
+                        </div>
+                        <div class="WeatherDetailsListItem">
+                            <div
+                                class="WeatherDetailsListItem--label">Humidity</div>
+                            <div class="WeatherDetailsListItem--wxData"
+                                id="humidity"></div>
+                        </div>
+                        <div class="WeatherDetailsListItem">
+                            <div
+                                class="WeatherDetailsListItem--label">Wind</div>
+                            <div class="WeatherDetailsListItem--wxData"
+                                id="wind"></div>
+                        </div>
+                        <div class="WeatherDetailsListItem">
+                            <div
+                                class="WeatherDetailsListItem--label">Pressure</div>
+                            <div class="WeatherDetailsListItem--wxData"
+                                id="pressure"></div>
+                        </div>
+                        <div class="WeatherDetailsListItem">
+                            <div
+                                class="WeatherDetailsListItem--label">Visibility</div>
+                            <div class="WeatherDetailsListItem--wxData"
+                                id="visibility"></div>
+                        </div>
+                        <div class="WeatherDetailsListItem">
+                            <div class="WeatherDetailsListItem--label">Sunrise &
+                                Sunset</div>
+                            <div class="WeatherDetailsListItem--wxData">
+                                <div class="sunrise-sunset">
+                                    <div class="sunrise-sunset-icon">
+                                        <img
+                                            src="https://i.pinimg.com/564x/11/f2/33/11f233d5a724397e375a775c0b903c73.jpg"
+                                            alt="Sunrise Icon"
+                                            class="WeatherDetailsListItem--icon">
+                                        <span id="sunrise"></span>
+                                    </div>
+                                    <div class="sunrise-sunset-icon">
+                                        <img
+                                            src="https://i.pinimg.com/564x/aa/58/22/aa5822b018ac41219f5a053ddf80c977.jpg"
+                                            alt="Sunset Icon"
+                                            class="WeatherDetailsListItem--icon">
+                                        <span id="sunset"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- No Data Available -->
+            <div id="noData" class="no-data d-none">
+                <h3>No weather data available.</h3>
+            </div>
+
+            <div id="error" class="error-message d-none">
+            </div>            
+
+        </div>
+
+        <script src="/js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.1/build/global/luxon.min.js"></script>
+    </body>
+</html>

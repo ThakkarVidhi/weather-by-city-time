@@ -1,0 +1,17 @@
+{
+  "name": "weather-by-city-time",
+  "version": "1.0.0",
+  "description": "This is Weather project using ExpressJS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vidhi",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.18.2"
+  }
+}
